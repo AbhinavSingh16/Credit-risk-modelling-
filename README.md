@@ -20,6 +20,15 @@ warnings.filterwarnings('ignore')
 
 print("✅ ALL LIBRARIES INSTALLED!")
 
-What you did: You told Colab to download all the tools you need.
 
-If it fails: Run it again. Kaggle sometimes needs 2 tries.
+PHASE 2: DOWNLOAD DATA 
+In python
+# Setup Kaggle API
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+
+# Download dataset
+!kaggle datasets download -d mlg-ulb/creditcardfraud -p ./data --unzip
+
+print("✅ DATA DOWNLOADED!")
